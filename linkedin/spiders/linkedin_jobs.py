@@ -23,12 +23,12 @@ class LinkedJobsSpider(scrapy.Spider):
         print('*****')
 
         for job in jobs:
-            job_item['job_title'] = job.css("h3::text").get(default='not-found').strip()
-            job_item['job_detail_url'] = job.css(".base-card__full-link::attr(href)").get(default='not-found').strip()
+            job_item['Pekerjaan'] = job.css("h3::text").get(default='not-found').strip()
+            job_item['detail'] = job.css(".base-card__full-link::attr(href)").get(default='not-found').strip()
             job_item['job_listed'] = job.css('time::text').get(default='not-found').strip()
-            job_item['company_name'] = job.css('h4 a::text').get(default='not-found').strip()
-            job_item['company_link'] = job.css('h4 a::attr(href)').get(default='not-found')
-            job_item['company_location'] = job.css('.job-search-card__location::text').get(default='not-found').strip()
+            job_item['Perusahaan'] = job.css('h4 a::text').get(default='not-found').strip()
+            job_item['link'] = job.css('h4 a::attr(href)').get(default='not-found')
+            job_item['lokasi'] = job.css('.job-search-card__location::text').get(default='not-found').strip()
             yield job_item
 
         if num_jobs_returned > 0:

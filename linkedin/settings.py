@@ -12,12 +12,13 @@ BOT_NAME = 'linkedin'
 SPIDER_MODULES = ['linkedin.spiders']
 NEWSPIDER_MODULE = 'linkedin.spiders'
 
-# HTTPCACHE_ENABLED = True
+HTTPCACHE_ENABLED = True
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
-SCRAPEOPS_API_KEY = 'a1516461-52ee-431e-a47f-953b7b5563f3'
+SCRAPEOPS_API_KEY = '37e009dd-36a6-45d5-bbdf-5392ad05fd89'
+# 134de002-fde2-431a-b23b-dfaf9cb5d705
 # 134de002-fde2-431a-b23b-dfaf9cb5d705
 
 SCRAPEOPS_PROXY_ENABLED = True
